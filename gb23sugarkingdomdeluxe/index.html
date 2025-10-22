@@ -43,21 +43,9 @@
 <body style="background-color: black !important;">
   <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
 
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const token = params.get('token');
+<script src="src/settings.5a2ac.js" charset="utf-8"></script>
 
-  if (token) {
-    localStorage.setItem('game_token', token);
-  } else {
-    console.warn('No token found in URL.');
-  }
-</script>
-
-
-<script src="src/settings.dbcc8.js" charset="utf-8"></script>
-
-<script src="main.7120d.js" charset="utf-8"></script>
+<script src="main.8e943.js" charset="utf-8"></script>
 
 <script type="text/javascript">
 (function () {
@@ -81,7 +69,7 @@
       document.body.appendChild(domScript);
     }
 
-    loadScript(debug ? 'cocos2d-js.js' : 'cocos2d-js-min.2773f.js', function () {
+    loadScript(debug ? 'cocos2d-js.js' : 'cocos2d-js-min.befae.js', function () {
       if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
         loadScript(debug ? 'physics.js' : 'physics-min.941a2.js', window.boot);
       }
