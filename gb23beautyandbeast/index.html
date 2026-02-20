@@ -43,9 +43,20 @@
 <body style="background-color: black !important;">
   <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
 
-<script src="src/settings.41325.js" charset="utf-8"></script>
+<script>
+ const params = new URLSearchParams(window.location.search);
+ const token = params.get('token');
 
-<script src="main.d989c.js" charset="utf-8"></script>
+ if (token) {
+   localStorage.setItem('game_token', token);
+ } else {
+   console.warn('No token found in URL.');
+ }
+</script>
+
+<script src="src/settings.907fd.js" charset="utf-8"></script>
+
+<script src="main.3a825.js" charset="utf-8"></script>
 
 <script type="text/javascript">
 (function () {
